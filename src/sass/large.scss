@@ -1,0 +1,122 @@
+@use "./colors" as *;
+
+@mixin respond-large {
+	@media (min-width: 992px) {
+		.cookie-box {
+			font-size: 1.8rem;
+			padding: 1.5em 1em 0;
+		}
+		.header {
+			&__undertitle {
+				top: 60%;
+				left: 50%;
+				font-size: 3.5rem;
+			}
+			&__title {
+				font-size: 3rem;
+			}
+		}
+
+		.aboutus {
+			&__boxes {
+				flex-direction: row;
+				margin: 0 5em;
+				margin-right: 1em;
+			}
+			&__box {
+				width: 30em;
+				padding-bottom: 4em;
+				padding: 0 2em 4em;
+			}
+			&__box-title {
+				margin: 2em 0 0.8em;
+				font-size: 4rem;
+			}
+			&__box-text {
+				margin: 0 0 0 0.5em;
+			}
+			&__box-text p {
+				font-size: 2rem;
+				margin: 1em 0em;
+			}
+			&__box-first {
+				display: none;
+			}
+			&__box-img-first {
+				display: none;
+			}
+			&__box-img-first-desktop {
+				position: absolute;
+				top: 20%;
+				left: 10%;
+				width: 20em;
+				height: 25em;
+				background-image: url(../../dist/img/aboutus1.jpg);
+				background-repeat: no-repeat;
+				background-size: cover;
+				background-position: center;
+				box-shadow: 0 0 15px;
+			}
+			&__box-img-second {
+				position: absolute;
+				top: 58%;
+				left: 10%;
+				width: 20em;
+				height: 28em;
+				background-size: cover;
+				box-shadow: 0 0 15px;
+			}
+			&__clients {
+				&__title {
+					margin: 2em 0 0.7em;
+					font-size: 3.5rem;
+				}
+			}
+		}
+		.offer {
+			&__bigbox {
+				margin-bottom: 4em;
+			}
+			&__titlebox {
+				&__title {
+					font-size: 2.5rem;
+					margin-top: 1em;
+				}
+				&__text {
+					font-size: 2rem;
+				}
+			}
+			&__boxes-accesories {
+				margin: 2em 10em;
+			}
+		}
+		.implementation__title {
+			font-size: 3.5rem;
+		}
+		.form__question-text h2 {
+			font-size: 3.5rem;
+		}
+		.form__question-text {
+			padding: 0 4em;
+		}
+		.product {
+			&__info {
+				padding: 2em 4em 3em;
+			}
+			&__image-first {
+				max-height: 25em;
+				max-width: 25em;
+				margin: 1em 0em 0em 1em;
+			}
+			&__image {
+				max-height: 25em;
+				max-width: 25em;
+				margin: 1em 0.7em 0.5em 1em;
+				&--left {
+					float: left;
+					margin: 1em 1em 0em 0em;
+				}
+			}
+		}
+	}
+}

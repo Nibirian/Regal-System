@@ -1,0 +1,100 @@
+@use "./colors" as *;
+
+@mixin respond-small {
+	@media (min-width: 576px) {
+		.cookie-box {
+			font-size: 2rem;
+			padding: 0.5em 1em 0;
+		}
+		.header {
+			&__title h2 {
+				font-size: 5rem;
+			}
+		}
+		.header__title-product {
+			font-size: 4rem;
+		}
+		.header__undertitle-secondary-product h1 {
+			font-size: 4rem;
+		}
+		.nav-bar-title{
+			font-size: 2rem;
+		}
+		.offer__bigbox {
+			margin: 0 15% 2em;
+		}
+		.offer__boxes-secondary {
+			margin: 2em 15%;
+		}
+		.offer__titlebox__text{
+			margin: 0 3em;
+		}
+		.product {
+			&__info {
+				display: block;
+				padding: 2em 2em 3em;
+			}
+			&__title {
+				text-align: left;
+				padding: 2em 0 1em;
+				font-size: 2.3rem;
+				&--right {
+					text-align: right;
+				}
+			}
+			&__text {
+				padding: 0;
+				font-size: 2rem;
+				line-height: 2em;
+			}
+			&__text h2 {
+				font-size: 2.5rem;
+			}
+			&__image-first {
+				display: block;
+				max-height: 18em;
+				max-width: 15em;
+				background-size: cover;
+				float: right;
+				margin: 1em 0em 0em 0.5em;
+				box-shadow: 0 0 20px black;
+				transition: transform 0.3s;
+				// cursor: pointer;
+				&:hover {
+					transform: scale(1.03);
+				}
+			}
+			&__image {
+				max-height: 18em;
+				max-width: 15em;
+				background-size: cover;
+				float: right;
+				margin: 1em 0em 1em 0.5em;
+				box-shadow: 0 0 20px black;
+				transition: transform 0.3s;
+				// cursor: pointer;
+				&:hover {
+					transform: scale(1.03);
+				}
+				&--left {
+					float: left;
+					margin: 1em 1em 0em 0em;
+				}
+			}
+			&__bigbox {
+				margin: 0;
+				display: flex;
+				justify-content: center;
+			}
+			&__boxes {
+				margin: 0 0.5em;
+			}
+		}
+		table {
+			display: table;
+		}
+		.gallery {
+			margin-bottom: 2em;
+		}
+	}
+}

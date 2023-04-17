@@ -1,0 +1,100 @@
+@use "./colors" as *;
+
+@mixin respond-medium {
+	@media (min-width: 768px) {
+		.form__question-text p {
+			padding: 0 6em;
+		}
+		.contact__box-form {
+			margin: 0 4em;
+		}
+		.aboutus__box-img-second {
+			margin-bottom: 2em;
+		}
+		.header {
+			&__title h2{
+				font-size: 5rem;
+			}
+			&__undertitle {
+				font-size: 3rem;
+			}
+		}
+		.header__undertitle-secondary-product h1 {
+			font-size: 5rem;
+		}
+		.nav-link {
+			font-size: 2.5rem;
+			padding: 0.5em;
+		}
+		.offer__titlebox__text {
+			margin: 0 15%;
+		}
+		.offer {
+			&__bigbox {
+				margin-bottom: 2em;
+			}
+			&__boxes {
+				flex-direction: row;
+				justify-content: center;
+			}
+			&__offerbox {
+				min-width: 14em;
+				max-width: 4em;
+			}
+			&__offerbox--short {
+				height: 12em;
+			}
+		}
+		.aboutus__box-text {
+			margin: 0 5%;
+		}
+
+		.offer {
+			&__boxes-secondary {
+				flex-wrap: wrap;
+				flex-direction: row;
+				justify-content: center;
+				margin: 2em;
+			}
+			&__offerbox-secondary {
+				position: relative;
+				background-position: bottom;
+				background-size: cover;
+				align-self: center;
+				min-width: 14em;
+				width: 18em;
+				height: 10em;
+				margin: 1em;
+				border-radius: 4px;
+				box-shadow: 0 0 15px $black;
+				transition: box-shadow 0.3s, transform 0.3s;
+				&:hover {
+					box-shadow: 0 0 30px $black;
+					transform: scale(1.05);
+				}
+				&:hover .offer__offerbox-shadow {
+					background-color: rgba(0, 0, 0, 0.2);
+				}
+				&:hover .offer__offerbox-title {
+					color: $orange;
+				}
+			}
+		}
+		.product {
+			&__image-first {
+				max-height: 18em;
+				max-width: 22em;
+				margin: 1em 0em 0em 1em;
+			}
+			&__image {
+				max-height: 18em;
+				max-width: 22em;
+				margin: 1em 0.7em 0.5em 1em;
+				&--left {
+					float: left;
+					margin: 1em 1em 0em 0em;
+				}
+			}
+		}
+	}
+}
